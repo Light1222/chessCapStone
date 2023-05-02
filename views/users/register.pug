@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+
+    div.content
+        div.form-header Register
+        div
+            form(action="/register" method="POST")
+                div.input-container.wide
+                    label(for="username").form-label User Name
+                    input(type="username" name="username" id="username" required=true)
+                    div.helper-text This is how you will log in
+                div.input-container.wide
+                    label(for="email").form-label Email Address
+                    input(type="email" name="email" id="email" required=true)
+                    div.helper-text This is how you will log in
+                div.input-container
+                    label(for="password").form-label Password
+                    input(type="password" name="password" id="password" required=true)
+                    div.helper-text Must be 8-20 characters long.
+                button.button.primary(type="submit") Register
