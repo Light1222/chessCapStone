@@ -13,3 +13,7 @@ module.exports.registerUser = async function(req, res){
     })
     res.redirect('/')
 }
+
+module.exports.renderLoginForm = function(req, res){
+    res.render('user/login')
+}
