@@ -1,7 +1,14 @@
 extends layout
 
 block content
-  //include mixins/chessCard
+  include mixins/chessCard
   div.container
+    div.container
+    form(action ='/' method = 'get')
+      div.form-input
+        label(for = piece) Piece:
+        select(id = 'piece' name= 'piece' autocomplete='off')
+          each piece in pieces
+            option(value = piece selected =(type === findPiece)) #{piece}
 
 

@@ -1,29 +1,91 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #E2E8F0;
-  margin: 0;
-  padding: 0;
+  background: url('https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpH1xFPj.png');
+  background-color: #f7f7f7;
+  color: black;
+  font-size: 20px;
+  text-background-color: black;
 }
 
-html {
-  margin: 0;
-  padding: 0;
+p {
+  font-weight: bold;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  display: flex;
+}
+.card-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 968px;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.random{
+  font-size: 30px;
+}
+
+img.v {
+  width: 100px;
+  height: 100px;
+}
+
+img.level {
+  width: 40px;
+  height: 40px;
 }
 
 a {
-  color: #065F46;
+  color: #970c0c;
   display: inline-block;
   margin-right: 24px;
   text-decoration: none;
 }
 
+a.play{
+  color: black;
+  display: inline-block;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+nav {
+  box-shadow: 0 1px 3px 0 rgba(0 0 0  0.1), 0 1px 2px -1px rgba(0 0 0  0.1);
+  margin-bottom: 50px;
+  background: #000000;
+
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  padding: 20px 20px;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h2 {
+  color: #b07817;
+  font-size: 20px;
+}
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-}
-container.blog {
-  max-width: 1024px;
 }
 
 .content {
@@ -41,79 +103,6 @@ container.blog {
 .flex-between {
   display: flex;
   justify-content: space-between;
-}
-
-.time {
-  color: #71717A;
-  font-size: 12px;
-}
-
-/*all todo items styles*/
-.section-list {
-  margin: 32px 0;
-}
-
-.list-header {
-  font-size: 16px;
-  color: #52525B;
-  margin-bottom: 16px;
-}
-
-.table-container {
-  overflow: hidden;
-  border-radius: 16px;
-  max-width: 800px;
-  border: 1px solid #D4D4D8;
-  margin-bottom: 16px;
-}
-
-table.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table thead {
-  background: #F4F4F5;
-}
-
-.table th, .table td {
-  padding: 12px 25px;
-}
-
-.table th {
-  color: #52525B;
-
-}
-
-.table td {
-  color: #27272A;
-  font-size: 16px;
-}
-
-
-.completed .table td {
-  color: #A1A1AA;
-}
-
-.table td a {
-  font-size: 14px;
-}
-
-.table tr:nth-child(2n) {
-  background: #F4F4F5;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
 }
 
 
