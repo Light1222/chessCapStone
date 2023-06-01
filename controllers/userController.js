@@ -7,7 +7,7 @@ module.exports.renderRegistrationForm = async function(req, res){
 };
 module.exports.register = async function(req, res){
     await User.create({
-        // username: req.body.username,
+        username: req.body.username,
         email: req.body.email,
         password: md5(req.body.password)
     });

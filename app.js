@@ -18,44 +18,41 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(
-    session({
-      secret: 'keyboard cat',
-      resave: true,
-      saveUninitialized: false,
-      cookie: {
-        secure: false,
+app.use(session({
+    secret:'somerandomstring',
+    resave: true,
+    saveUninitialized:false,
+    cookie: {
+        secure:false,
         maxAge: 6*60*60*1000
-      }
-    })
-);
-const {passport} = require('./middleware/passport.js')
-//init passport
+    }
+}));
+const {passport} = require('./middleware/passport.js');
 app.use(passport.initialize());
-//authenticate on each request
 app.use(passport.authenticate('session'));
-
-app.use(function (req,res,next){
-  res.locals.user = req.user || null;
-  next();
-})
+app.use(function(req, res, next){
+    if (req.user){
+        res.locals.user = req.user;
+    };
+    next();
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

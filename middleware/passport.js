@@ -39,6 +39,9 @@ passport.deserializeUser(async function(user, done){
     process.nextTick(function () {
         return done(null, userModel);
     });
+    // process.nextTick(function(){
+    //     return done(null, userModel)
+    // })
 });
 
 module.exports.passport = passport;
